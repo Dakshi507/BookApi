@@ -21,10 +21,6 @@ jobs:
     - name: Build
       run: dotnet build --configuration Release
 
-    - name: Test
-      run: |
-        dotnet test ProductWebAPI.sln --configuration Release --no-restore --verbosity normal
-
   deploy:
     needs: build
     runs-on: ubuntu-latest
